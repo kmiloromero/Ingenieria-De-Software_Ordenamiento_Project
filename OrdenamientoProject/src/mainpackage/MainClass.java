@@ -6,9 +6,10 @@
 package mainpackage;
 
 /*// claudia *
- *
+ 
  * @author Romero
  */
 public class MainClass {
     // Hola Soy camilo
+    // Hola Soy Hermes
 }
