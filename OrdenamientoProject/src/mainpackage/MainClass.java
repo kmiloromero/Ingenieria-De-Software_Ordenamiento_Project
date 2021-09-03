@@ -10,6 +10,7 @@ import listapackage.*;
  * @author Romero
  */
 public class MainClass {
+    //prueba monica
     
 /* El objeto prueba de tipo ListaClass y los metodos pruebaascendente y 
  * pruebadescendente se eliminaran luego de ser testeados
@@ -547,4 +548,7 @@ public class MainClass {
     //p1.pruebaascendente();        
     p1.pruebadescendente();
     }    
+    
 }
+
+
