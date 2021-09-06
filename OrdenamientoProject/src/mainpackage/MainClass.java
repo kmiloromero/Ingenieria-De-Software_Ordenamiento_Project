@@ -18,6 +18,6 @@ public class MainClass {
     public static void main(String[] args) {
     TxtClass prueba1 = new TxtClass();
 
-    prueba1.LecturaTxt();
+    prueba1.mLecturayescritura();
     }    
 }

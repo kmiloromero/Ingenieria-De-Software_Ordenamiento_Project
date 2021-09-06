@@ -23,7 +23,7 @@ public class TxtClass {
     private String path = "C:\\Users\\secar\\Downloads\\prueba.txt";
     private ListaClass b;
 
-    public void LecturaTxt(){
+    public void mLecturayescritura(){
  
         File archivo = null;
         FileReader fr = null;
