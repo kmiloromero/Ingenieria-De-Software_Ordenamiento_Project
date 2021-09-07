@@ -30,9 +30,6 @@ public class ListaClass {
  * debe quedar para asi buscar su ordenamiento en el momento de la insercion
      */
     public void InsercionAscendente(ArrayList numero) {
-        while () {
-        }
-
         Nodo nuevonodo = new Nodo();
         //guardamos la informacion entrante
         nuevonodo.dato = (int) numero;
@@ -61,7 +58,7 @@ public class ListaClass {
         }
     }
 
-    public void InsercionDescendente(double numero) {
+    public void InsercionDescendente(ArrayList numero) {
         Nodo nuevonodo = new Nodo();
         //guardamos la informacion entrante
         nuevonodo.dato = (int) numero;

@@ -27,12 +27,15 @@ public class TxtClass {
     FileWriter escribirArchivo = null;
     PrintWriter escritorFichero = null;
 
-    public ArrayList mLectura() {
+    public void asignacionpath(String ruta) {
+        this.path = ruta;
+    }
+
+    public void mLectura(int identificador) {
 
         ArrayList lista = new ArrayList();
         try {
             // Lectura de Fichero con Filereader
-            path = "C:\\Users\\secar\\Downloads\\prueba.txt";
             archivo = new File(path);
             leerArchivo = new FileReader(archivo);
             lectorArchivo = new BufferedReader(leerArchivo);
@@ -54,30 +57,31 @@ public class TxtClass {
             } catch (Exception e2) {
                 e2.printStackTrace();
             }
+            switch (identificador)
+            {
+                case 1: identificador=0;
+                ordenamiento.InsercionAscendente(lista);
+                case 2: identificador=1;
+                ordenamiento.InsercionDescendente(lista);
+            }
         }
-        ordenamiento.InsercionAscendente(lista);
-
-        return null;
     }
 
-    public ArrayList mEscritura(ArrayList lista) {
+    public void mEscritura(ArrayList lista) {
         try {
-            String path = "C:\\Users\\secar\\Downloads";
+            String ruta = "C:\\Users\\secar\\Downloads";
             ArrayList Archivo = lista;
-            escribirArchivo = new FileWriter(path, true);
+            escribirArchivo = new FileWriter(ruta, true);
             escritorFichero = new PrintWriter(escribirArchivo);
             System.out.println("Escribiendo en Fichero...");
-            
-            while (Archivo != null) {
-                escritorFichero.println(Archivo);
-                
-                
+
+            for (int i = 0; i < Archivo.size(); i++) {
+                escritorFichero.println("-" + Archivo.get(i));
+                escritorFichero.flush();
             }
             escritorFichero.close();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
-        return null;
     }
 }
