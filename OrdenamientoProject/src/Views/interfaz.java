@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package interfaz;
+package Views;
+import Models.ListaClass;
+import Models.TxtClass;
 import java.io.File;
 import javax.swing.JFileChooser;
 import listapackage.*;
@@ -196,7 +198,7 @@ public class interfaz extends javax.swing.JFrame {
         
         ListaClass lista = new ListaClass();
         TxtClass txt = new TxtClass();
-        txt.LecturaTxt(ruta);
+        txt.(ruta);
          
         if(RB_Ascendente.isSelected()){
             

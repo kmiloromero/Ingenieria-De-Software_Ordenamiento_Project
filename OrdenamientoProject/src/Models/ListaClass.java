@@ -5,6 +5,8 @@
  */
 package Models;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Romero
@@ -27,7 +29,10 @@ public class ListaClass {
  * siempre que se inserta un nodo, buscara la posicion en la lista donde 
  * debe quedar para asi buscar su ordenamiento en el momento de la insercion
      */
-    public void InsercionAscendente(double numero) {
+    public void InsercionAscendente(ArrayList numero) {
+        while () {
+        }
+
         Nodo nuevonodo = new Nodo();
         //guardamos la informacion entrante
         nuevonodo.dato = (int) numero;
@@ -85,12 +90,12 @@ public class ListaClass {
         }
     }
 
-    public void imprimir(){
+    public void imprimir() {
         Nodo reco = raiz;
-        while(reco.siguiente != null){
+        while (reco.siguiente != null) {
             System.out.println(reco.dato + " - ");
-            reco = reco.siguiente;            
+            reco = reco.siguiente;
         }
         System.out.println();
-    }    
+    }
 }
