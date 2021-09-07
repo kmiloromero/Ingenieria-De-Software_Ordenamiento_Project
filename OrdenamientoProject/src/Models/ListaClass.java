@@ -29,63 +29,67 @@ public class ListaClass {
  * siempre que se inserta un nodo, buscara la posicion en la lista donde 
  * debe quedar para asi buscar su ordenamiento en el momento de la insercion
      */
-    public void InsercionAscendente(ArrayList numero) {
+    public void InsercionAscendente(ArrayList lista) {
         Nodo nuevonodo = new Nodo();
         //guardamos la informacion entrante
-        nuevonodo.dato = (int) numero;
-        if (raiz == null) {
-            raiz = nuevonodo;
-            nuevonodo.siguiente = null;
-        } else {
-            if (numero < raiz.dato) {
-                nuevonodo.siguiente = raiz;
+        for(int i = 0; i < lista.size(); i++){
+            nuevonodo.dato = (int) lista.get(i);
+            if (raiz == null) {
                 raiz = nuevonodo;
+                nuevonodo.siguiente = null;
             } else {
-                Nodo reco = raiz;
-                Nodo atras = raiz;
-                while (numero >= reco.dato && reco.siguiente != null) {
-                    atras = reco;
-                    reco = reco.siguiente;
-                }
-                if (numero >= reco.dato) {
-                    reco.siguiente = nuevonodo;
-                    nuevonodo.siguiente = null;
+                if ((int)lista.get(i) < raiz.dato) {
+                    nuevonodo.siguiente = raiz;
+                    raiz = nuevonodo;
                 } else {
+                    Nodo reco = raiz;
+                    Nodo atras = raiz;
+                    while ((int)lista.get(i) >= reco.dato && reco.siguiente != null) {
+                        atras = reco;
+                        reco = reco.siguiente;
+                    }
+                    if ((int)lista.get(i) >= reco.dato) {
+                        reco.siguiente = nuevonodo;
+                        nuevonodo.siguiente = null;
+                    } else {
                     nuevonodo.siguiente = reco;
                     atras.siguiente = nuevonodo;
+                    }
                 }
             }
         }
-    }
+    }//fin InsercionAscendente
 
-    public void InsercionDescendente(ArrayList numero) {
+    public void InsercionDescendente(ArrayList lista) {
         Nodo nuevonodo = new Nodo();
         //guardamos la informacion entrante
-        nuevonodo.dato = (int) numero;
-        if (raiz == null) {
-            raiz = nuevonodo;
-            nuevonodo.siguiente = null;
-        } else {
-            if (numero > raiz.dato) {
-                nuevonodo.siguiente = raiz;
+        for(int i = 0 ; i < lista.size();i++){            
+            nuevonodo.dato = (int) lista.get(i);
+            if (raiz == null) {
                 raiz = nuevonodo;
+                nuevonodo.siguiente = null;
             } else {
-                Nodo reco = raiz;
-                Nodo atras = raiz;
-                while (numero >= reco.dato && reco.siguiente != null) {
-                    atras = reco;
-                    reco = reco.siguiente;
-                }
-                if (numero <= reco.dato) {
-                    reco.siguiente = nuevonodo;
-                    nuevonodo.siguiente = null;
+                if ((int)lista.get(i) > raiz.dato) {
+                    nuevonodo.siguiente = raiz;
+                    raiz = nuevonodo;
                 } else {
-                    nuevonodo.siguiente = reco;
-                    atras.siguiente = nuevonodo;
+                    Nodo reco = raiz;
+                    Nodo atras = raiz;
+                    while ((int)lista.get(i) >= reco.dato && reco.siguiente != null) {
+                        atras = reco;
+                        reco = reco.siguiente;
+                    }
+                    if ((int)lista.get(i) <= reco.dato) {
+                        reco.siguiente = nuevonodo;
+                        nuevonodo.siguiente = null;
+                    } else {
+                        nuevonodo.siguiente = reco;
+                        atras.siguiente = nuevonodo;
+                    }   
                 }
             }
         }
-    }
+    }//fin InsercionDescendente
 
     public void imprimir() {
         Nodo reco = raiz;
@@ -94,5 +98,9 @@ public class ListaClass {
             reco = reco.siguiente;
         }
         System.out.println();
-    }
-}
+    }//fin imprimir
+    
+    public static void main(String[] args) {
+        
+    }//fin prueba main
+}//fin ListaClass
