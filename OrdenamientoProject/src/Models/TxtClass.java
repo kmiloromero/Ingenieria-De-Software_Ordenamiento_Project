@@ -13,10 +13,9 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-
 /**
  *
- * @author Romero
+ * @author Group 2
  */
 public class TxtClass {
 
@@ -25,12 +24,12 @@ public class TxtClass {
     File archivo = null;
     FileReader leerArchivo = null;
     BufferedReader lectorArchivo = null;
-    FileWriter escribirArchivo =null;
-    BufferedWriter escrituraArchivo = null;
+    FileWriter escribirArchivo = null;
+    PrintWriter escritorFichero = null;
 
     public ArrayList mLectura() {
-     
-        ArrayList<String> lista = new ArrayList();
+
+        ArrayList lista = new ArrayList();
         try {
             // Lectura de Fichero con Filereader
             path = "C:\\Users\\secar\\Downloads\\prueba.txt";
@@ -45,9 +44,9 @@ public class TxtClass {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-        // En el finally cerramos el fichero, para asegurarnos
-        // que se cierra tanto si todo va bien como si salta 
-        // una excepcion.
+            // En el finally cerramos el fichero, para asegurarnos
+            // que se cierra tanto si todo va bien como si salta 
+            // una excepcion.
             try {
                 if (null != lectorArchivo) {
                     lectorArchivo.close();
@@ -56,33 +55,29 @@ public class TxtClass {
                 e2.printStackTrace();
             }
         }
-       ordenamiento.InsercionAscendente(lista);
-       
+        ordenamiento.InsercionAscendente(lista);
+
         return null;
     }
-    
-    public ArrayList mEscritura (ArrayList lista){
+
+    public ArrayList mEscritura(ArrayList lista) {
         try {
             String path = "C:\\Users\\secar\\Downloads";
             ArrayList Archivo = lista;
-            File file = new File(path);
-            // Si el archivo no existe es creado
-            if (!file.exists()) {
-                file.createNewFile();
+            escribirArchivo = new FileWriter(path, true);
+            escritorFichero = new PrintWriter(escribirArchivo);
+            System.out.println("Escribiendo en Fichero...");
+            
+            while (Archivo != null) {
+                escritorFichero.println(Archivo);
+                
+                
             }
-            escribirArchivo = new FileWriter(file);
-            escrituraArchivo = new BufferedWriter(escribirArchivo);
-            
-            while ()
-            escrituraArchivo.write(lista);
-            
-            
-            escrituraArchivo.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+            escritorFichero.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
-    
-    
-    return null;
+
+        return null;
     }
 }
