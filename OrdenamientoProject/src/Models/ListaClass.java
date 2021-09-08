@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package Models;
-
 import java.util.ArrayList;
 
 /**
@@ -90,17 +89,4 @@ public class ListaClass {
             }
         }
     }//fin InsercionDescendente
-
-    public void imprimir() {
-        Nodo reco = raiz;
-        while (reco.siguiente != null) {
-            System.out.println(reco.dato + " - ");
-            reco = reco.siguiente;
-        }
-        System.out.println();
-    }//fin imprimir
-    
-    public static void main(String[] args) {
-        
-    }//fin prueba main
 }//fin ListaClass
