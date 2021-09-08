@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author Romero
  */
 public class ListaClass {
-
+TxtClass a = new TxtClass();
     /* se crea el metodo Nodo que será la estructura de la lista con los atributos
  * int dato que almacenara el valor numerico y apuntador que direcciona al   
  * siguiente nodo.
@@ -57,7 +57,7 @@ public class ListaClass {
                 }
             }
         }
-        llamado();
+        a.mEscritura(llamado());    
     }//fin InsercionAscendente
 
     public void InsercionDescendente(ArrayList lista) {
@@ -89,7 +89,7 @@ public class ListaClass {
                 }
             }
         }
-        llamado();
+       a.mEscritura(llamado());    
     }//fin InsercionDescendente
     
     public ArrayList llamado() {
