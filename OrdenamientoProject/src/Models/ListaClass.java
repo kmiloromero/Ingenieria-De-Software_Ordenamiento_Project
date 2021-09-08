@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 package Models;
+
 import java.util.ArrayList;
 
-/**
- *
+ /*
  * @author Romero
  */
 public class ListaClass {
@@ -57,6 +57,7 @@ public class ListaClass {
                 }
             }
         }
+        llamado();
     }//fin InsercionAscendente
 
     public void InsercionDescendente(ArrayList lista) {
@@ -88,5 +89,17 @@ public class ListaClass {
                 }
             }
         }
+        llamado();
     }//fin InsercionDescendente
-}//fin ListaClass
+    
+    public ArrayList llamado() {
+        ArrayList listaO = null;
+        Nodo reco = raiz;
+        while (reco.siguiente != null) {             
+            listaO.add(reco.dato);
+            reco = reco.siguiente;
+             }
+        return listaO;
+        } 
+    }//fin LiataClass
+
