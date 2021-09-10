@@ -88,9 +88,7 @@ public class Segundo_Panel extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 10, Short.MAX_VALUE))
+            .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
         );
 
         pack();
