@@ -62,7 +62,7 @@ public class Tercer_Panel extends javax.swing.JFrame {
         panel2.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 250, -1));
 
         jButton1.setText("Salir");
-        panel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 70, -1));
+        panel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 70, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
