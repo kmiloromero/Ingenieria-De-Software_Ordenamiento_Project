@@ -17,7 +17,7 @@ public class Controller {
     //Metodos Void Para Control de Archivo
 
     public void ControladorPath(String path) {
-        txt.asignacionpath(path);
+       txt.asignacionpath(path);
     }
 
     public void conectarEscritura(int identificador) {
