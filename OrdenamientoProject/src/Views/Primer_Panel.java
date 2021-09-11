@@ -29,16 +29,24 @@ public class Primer_Panel extends javax.swing.JFrame {
     private void initComponents() {
 
         panel1 = new java.awt.Panel();
+ 
         jTextField1 = new javax.swing.JTextField();
         jButtonAyuda = new javax.swing.JButton();
         jButtonIniciar = new javax.swing.JButton();
         jButtonSalir = new javax.swing.JButton();
+
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        main
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
         panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+Johan-Branch
         jTextField1.setEditable(false);
         jTextField1.setFont(new java.awt.Font("Arial", 2, 24)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
@@ -58,6 +66,10 @@ public class Primer_Panel extends javax.swing.JFrame {
         });
         panel1.add(jButtonAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 70, -1));
 
+        jButton1.setText("Ayuda");
+        panel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 70, -1));
+         main
+
         jButtonIniciar.setText("Iniciar");
         jButtonIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,6 +86,10 @@ public class Primer_Panel extends javax.swing.JFrame {
         });
         panel1.add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 70, -1));
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setText("Software Ordenamiento ");
+        panel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 270, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -88,6 +104,7 @@ public class Primer_Panel extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+ Johan-Branch
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
@@ -107,6 +124,8 @@ public class Primer_Panel extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButtonAyudaActionPerformed
 
+=======
+ main
     /**
      * @param args the command line arguments
      */
@@ -144,10 +163,17 @@ public class Primer_Panel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+ Johan-Branch
     private javax.swing.JButton jButtonAyuda;
     private javax.swing.JButton jButtonIniciar;
     private javax.swing.JButton jButtonSalir;
     private javax.swing.JTextField jTextField1;
+=======
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
+ main
     private java.awt.Panel panel1;
     // End of variables declaration//GEN-END:variables
 }
