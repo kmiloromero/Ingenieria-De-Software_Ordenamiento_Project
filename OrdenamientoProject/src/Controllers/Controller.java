@@ -5,20 +5,23 @@
  */
 package Controllers;
 
+import Models.TxtClass;
+
 /**
  *
  * @author user
  */
 public class Controller {
     
+    TxtClass txt = new TxtClass();
     //Metodos Void Para Control de Archivo
 
     public void ControladorPath(String path) {
-        
+        txt.asignacionpath(path);
     }
 
     public void conectarEscritura(int identificador) {
-        
+        txt.mLectura(identificador);
     }
     
     
