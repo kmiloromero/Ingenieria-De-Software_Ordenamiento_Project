@@ -104,7 +104,6 @@ Johan-Branch
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
- Johan-Branch
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
@@ -124,8 +123,7 @@ Johan-Branch
         
     }//GEN-LAST:event_jButtonAyudaActionPerformed
 
-=======
- main
+
     /**
      * @param args the command line arguments
      */
