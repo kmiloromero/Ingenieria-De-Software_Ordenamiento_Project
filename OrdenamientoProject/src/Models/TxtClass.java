@@ -29,11 +29,12 @@ public class TxtClass {
 
     public void asignacionpath(String ruta) {
         this.path = ruta;
-        
+
     }
 
     public void mLectura(int identificador) {
 
+        int ide = identificador;
         ArrayList lista = new ArrayList();
         try {
             // Lectura de Fichero con Filereader
@@ -44,19 +45,19 @@ public class TxtClass {
             String cadena;
             while ((cadena = lectorArchivo.readLine()) != null) {
                 lista.add(cadena);
-                System.out.println("dasdasd");
             }
-            switch (identificador)
-            {
-                case 1: identificador=0;
-                ordenamiento.InsercionAscendente(lista);
-                    System.out.println("entro");
-                case 2: identificador=1;
-                ordenamiento.InsercionDescendente(lista);
-                    System.out.println("entro2");
-            }   //Escritura de Fichero
-        } catch (Exception e) {
+            //String sLista = lista.toString();
+            //System.out.println(lista.toString());
             
+            if (ide == 0) {
+                ordenamiento.InsercionAscendente(lista);
+                System.out.println("Ordenando de Manera Ascendente");
+            } else if (ide == 1) {
+                ordenamiento.InsercionDescendente(lista);
+                System.out.println("Ordenando de Manera Descendente");
+            }
+            //Escritura de Fichero
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             // En el finally cerramos el fichero, para asegurarnos
