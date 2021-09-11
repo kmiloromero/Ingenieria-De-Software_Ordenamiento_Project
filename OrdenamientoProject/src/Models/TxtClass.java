@@ -19,7 +19,7 @@ import java.util.ArrayList;
  */
 public class TxtClass {
 
-    private String path = "";
+    private String path = "C:\\Users\\user\\Downloads\\prueba1.txt";
     private ListaClass ordenamiento;
     File archivo = null;
     FileReader leerArchivo = null;
@@ -29,6 +29,7 @@ public class TxtClass {
 
     public void asignacionpath(String ruta) {
         this.path = ruta;
+        
     }
 
     public void mLectura(int identificador) {
@@ -36,15 +37,26 @@ public class TxtClass {
         ArrayList lista = new ArrayList();
         try {
             // Lectura de Fichero con Filereader
+            String path = "C:\\Users\\user\\Downloads\\prueba1.txt";
             archivo = new File(path);
             leerArchivo = new FileReader(archivo);
             lectorArchivo = new BufferedReader(leerArchivo);
             String cadena;
             while ((cadena = lectorArchivo.readLine()) != null) {
                 lista.add(cadena);
+                System.out.println("dasdasd");
             }
-            //Escritura de Fichero
+            switch (identificador)
+            {
+                case 1: identificador=0;
+                ordenamiento.InsercionAscendente(lista);
+                    System.out.println("entro");
+                case 2: identificador=1;
+                ordenamiento.InsercionDescendente(lista);
+                    System.out.println("entro2");
+            }   //Escritura de Fichero
         } catch (Exception e) {
+            
             e.printStackTrace();
         } finally {
             // En el finally cerramos el fichero, para asegurarnos
@@ -57,19 +69,12 @@ public class TxtClass {
             } catch (Exception e2) {
                 e2.printStackTrace();
             }
-            switch (identificador)
-            {
-                case 1: identificador=0;
-                ordenamiento.InsercionAscendente(lista);
-                case 2: identificador=1;
-                ordenamiento.InsercionDescendente(lista);
-            }
         }
     }
 
     public void mEscritura(ArrayList lista) {
         try {
-            String ruta = "C:\\Users\\secar\\Downloads";
+            String ruta = "C:\\Users\\user\\Documentos";
             ArrayList Archivo = lista;
             escribirArchivo = new FileWriter(ruta, true);
             escritorFichero = new PrintWriter(escribirArchivo);
