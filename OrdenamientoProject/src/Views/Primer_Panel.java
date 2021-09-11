@@ -9,12 +9,12 @@ package Views;
  *
  * @author PC
  */
-public class Primer_Panell extends javax.swing.JPanel {
+public class Primer_Panel extends javax.swing.JPanel {
 
     /**
      * Creates new form Primer_Panell
      */
-    public Primer_Panell() {
+    public Primer_Panel() {
         initComponents();
     }
 
