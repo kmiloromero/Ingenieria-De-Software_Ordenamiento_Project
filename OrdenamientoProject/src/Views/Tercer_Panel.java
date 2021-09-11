@@ -62,6 +62,11 @@ public class Tercer_Panel extends javax.swing.JFrame {
         panel2.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 250, -1));
 
         jButton1.setText("Salir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         panel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 260, 70, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -81,6 +86,11 @@ public class Tercer_Panel extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Primer_Panel pp = new Primer_Panel();
+        pp.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
