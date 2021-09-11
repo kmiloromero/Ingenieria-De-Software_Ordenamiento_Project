@@ -111,10 +111,14 @@ public class Segundo_Panel extends javax.swing.JFrame {
 
     private void jButtonAscActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAscActionPerformed
         Controller ct = new Controller();
+        int identificador = 0;
+        ct.conectarEscritura(identificador);
     }//GEN-LAST:event_jButtonAscActionPerformed
 
     private void jButtonDesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDesActionPerformed
         Controller ct = new Controller();
+        int identificador = 1;
+        ct.conectarEscritura(identificador);
     }//GEN-LAST:event_jButtonDesActionPerformed
 
     private void jButtonExaminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExaminarActionPerformed
