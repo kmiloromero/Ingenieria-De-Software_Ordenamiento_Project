@@ -9,10 +9,10 @@ package Views;
  *
  * @author PC
  */
-public class Primer_Panel extends javax.swing.JPanel {
+public class Primer_Panel extends javax.swing.JFrame {
 
     /**
-     * Creates new form Primer_Panell
+     * Creates new form Primer_Panelll
      */
     public Primer_Panel() {
         initComponents();
@@ -28,62 +28,83 @@ public class Primer_Panel extends javax.swing.JPanel {
     private void initComponents() {
 
         panel1 = new java.awt.Panel();
-        jLabel1 = new javax.swing.JLabel();
-        button4 = new java.awt.Button();
-        button5 = new java.awt.Button();
-        button6 = new java.awt.Button();
+        label1 = new java.awt.Label();
+        button1 = new java.awt.Button();
+        button2 = new java.awt.Button();
+        button3 = new java.awt.Button();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("Software Ordenamiento");
-        panel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, 30));
+        label1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        label1.setText("Software Ordenamiento");
+        panel1.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
-        button4.setLabel("Ayuda");
-        panel1.add(button4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 60, -1));
+        button1.setLabel("Ayuda");
+        panel1.add(button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
 
-        button5.setLabel("Iniciar");
-        button5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button5ActionPerformed(evt);
-            }
-        });
-        panel1.add(button5, new org.netbeans.lib.awtextra.AbsoluteConstraints(119, 100, 60, -1));
+        button2.setLabel("Iniciar");
+        panel1.add(button2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, -1, -1));
 
-        button6.setLabel("Salir");
-        button6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button6ActionPerformed(evt);
-            }
-        });
-        panel1.add(button6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 60, -1));
+        button3.setLabel("Salir");
+        panel1.add(button3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, 50, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, 309, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void button5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button5ActionPerformed
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Primer_Panel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Primer_Panel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Primer_Panel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Primer_Panel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
 
-    private void button6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_button6ActionPerformed
-
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Primer_Panel().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Button button4;
-    private java.awt.Button button5;
-    private java.awt.Button button6;
-    private javax.swing.JLabel jLabel1;
+    private java.awt.Button button1;
+    private java.awt.Button button2;
+    private java.awt.Button button3;
+    private java.awt.Label label1;
     private java.awt.Panel panel1;
     // End of variables declaration//GEN-END:variables
 }
