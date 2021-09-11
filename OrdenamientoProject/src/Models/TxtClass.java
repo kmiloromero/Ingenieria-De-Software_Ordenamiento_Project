@@ -46,14 +46,14 @@ public class TxtClass {
             while ((cadena = lectorArchivo.readLine()) != null) {
                 lista.add(cadena);
             }
-            String sLista = lista.toString();
-            System.out.println(lista.toString());
+            //String sLista = lista.toString();
+            //System.out.println(lista.toString());
             
             if (ide == 0) {
-                ordenamiento.InsercionAscendente(sLista);
+                ordenamiento.InsercionAscendente(lista);
                 System.out.println("Ordenando de Manera Ascendente");
             } else if (ide == 1) {
-                ordenamiento.InsercionDescendente(sLista);
+                ordenamiento.InsercionDescendente(lista);
                 System.out.println("Ordenando de Manera Descendente");
             }
             //Escritura de Fichero

@@ -38,7 +38,8 @@ public class Primer_Panel extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("Software de Ordenamiento");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
         jButtonIniciar.setText("Iniciar");
@@ -47,7 +48,7 @@ public class Primer_Panel extends javax.swing.JFrame {
                 jButtonIniciarActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        jPanel1.add(jButtonIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
         jButtonAyuda.setText("Ayuda");
         jButtonAyuda.addActionListener(new java.awt.event.ActionListener() {
@@ -55,7 +56,7 @@ public class Primer_Panel extends javax.swing.JFrame {
                 jButtonAyudaActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+        jPanel1.add(jButtonAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
 
         jButtonSalir.setText("Salir");
         jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -63,7 +64,7 @@ public class Primer_Panel extends javax.swing.JFrame {
                 jButtonSalirActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 130, -1, -1));
+        jPanel1.add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -82,11 +83,14 @@ public class Primer_Panel extends javax.swing.JFrame {
     private void jButtonIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIniciarActionPerformed
         Segundo_Panel sp = new Segundo_Panel ();
         sp.setVisible(true);
+       
+        
     }//GEN-LAST:event_jButtonIniciarActionPerformed
 
     private void jButtonAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAyudaActionPerformed
         Tercer_Panel tp = new Tercer_Panel ();
         tp.setVisible(true);
+        
     }//GEN-LAST:event_jButtonAyudaActionPerformed
 
     private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
