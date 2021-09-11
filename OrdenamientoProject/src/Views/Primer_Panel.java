@@ -104,6 +104,7 @@ public class Primer_Panel extends javax.swing.JFrame {
     private void jButtonAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAyudaActionPerformed
         Tercer_Panel tp = new Tercer_Panel ();
         tp.setVisible(true);
+        
     }//GEN-LAST:event_jButtonAyudaActionPerformed
 
     /**
