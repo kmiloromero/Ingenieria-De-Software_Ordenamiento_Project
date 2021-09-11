@@ -5,6 +5,11 @@
  */
 package Views;
 
+import Controllers.Controller;
+import java.io.File;
+import javax.swing.JFileChooser;
+
+
 /**
  *
  * @author ClaudiaQuevedo
@@ -28,12 +33,12 @@ public class Segundo_Panel extends javax.swing.JFrame {
     private void initComponents() {
 
         panel1 = new java.awt.Panel();
-        jButton3 = new javax.swing.JButton();
+        jButtonExaminar = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jButtonDes = new javax.swing.JButton();
         jButtonAsc = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jButtonSalir = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -41,8 +46,13 @@ public class Segundo_Panel extends javax.swing.JFrame {
 
         panel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton3.setText("Examinar..");
-        panel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, 90, 30));
+        jButtonExaminar.setText("Examinar..");
+        jButtonExaminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonExaminarActionPerformed(evt);
+            }
+        });
+        panel1.add(jButtonExaminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 120, 90, 30));
 
         jTextField1.setEditable(false);
         panel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 410, 30));
@@ -73,8 +83,13 @@ public class Segundo_Panel extends javax.swing.JFrame {
         });
         panel1.add(jButtonAsc, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 190, 30));
 
-        jButton4.setText("Salir");
-        panel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, -1, 30));
+        jButtonSalir.setText("Salir");
+        jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalirActionPerformed(evt);
+            }
+        });
+        panel1.add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, -1, 30));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Ingrese la ruta del archivo TXT que desea ordenar");
@@ -95,12 +110,37 @@ public class Segundo_Panel extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonAscActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAscActionPerformed
-        // TODO add your handling code here:
+        Controller ct = new Controller();
     }//GEN-LAST:event_jButtonAscActionPerformed
 
     private void jButtonDesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDesActionPerformed
-        // TODO add your handling code here:
+        Controller ct = new Controller();
     }//GEN-LAST:event_jButtonDesActionPerformed
+
+    private void jButtonExaminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExaminarActionPerformed
+        //Creamos el FileChooser para tener la capacidad de escojer un fichero
+        Controller ct = new Controller();
+        JFileChooser fc = new JFileChooser();
+        //Abrimos la ventana de FileChooser
+        int selection = fc.showOpenDialog(this);
+        
+        //En caso de que en la seleccion de fichero se escoje uno
+        if (selection == JFileChooser.APPROVE_OPTION);
+            
+            File fichero = fc.getSelectedFile();
+            
+            //Escribir la ruta del fichero seleccionado en el campo de texto
+            String path;
+            this.jTextField1.setText(fichero.getAbsolutePath());
+            path = this.jTextField1.getText();
+            
+            ct.ControladorPath(path);
+    }//GEN-LAST:event_jButtonExaminarActionPerformed
+
+    private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
+        Primer_Panel pp = new Primer_Panel ();
+        pp.setVisible(true);  
+    }//GEN-LAST:event_jButtonSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,10 +178,10 @@ public class Segundo_Panel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButtonAsc;
     private javax.swing.JButton jButtonDes;
+    private javax.swing.JButton jButtonExaminar;
+    private javax.swing.JButton jButtonSalir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField jTextField1;
