@@ -30,9 +30,9 @@ public class Primer_Panel extends javax.swing.JFrame {
 
         panel1 = new java.awt.Panel();
         jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jButtonAyuda = new javax.swing.JButton();
+        jButtonIniciar = new javax.swing.JButton();
+        jButtonSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -50,14 +50,29 @@ public class Primer_Panel extends javax.swing.JFrame {
         });
         panel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 270, -1));
 
-        jButton1.setText("Ayuda");
-        panel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 70, -1));
+        jButtonAyuda.setText("Ayuda");
+        jButtonAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAyudaActionPerformed(evt);
+            }
+        });
+        panel1.add(jButtonAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 70, -1));
 
-        jButton2.setText("Iniciar");
-        panel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 70, -1));
+        jButtonIniciar.setText("Iniciar");
+        jButtonIniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonIniciarActionPerformed(evt);
+            }
+        });
+        panel1.add(jButtonIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 70, -1));
 
-        jButton3.setText("Salir");
-        panel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 70, -1));
+        jButtonSalir.setText("Salir");
+        jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalirActionPerformed(evt);
+            }
+        });
+        panel1.add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 70, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -76,6 +91,20 @@ public class Primer_Panel extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButtonIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIniciarActionPerformed
+        Segundo_Panel sp = new Segundo_Panel ();
+        sp.setVisible(true);
+    }//GEN-LAST:event_jButtonIniciarActionPerformed
+
+    private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButtonSalirActionPerformed
+
+    private void jButtonAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAyudaActionPerformed
+        Tercer_Panel tp = new Tercer_Panel ();
+        tp.setVisible(true);
+    }//GEN-LAST:event_jButtonAyudaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -114,9 +143,9 @@ public class Primer_Panel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonAyuda;
+    private javax.swing.JButton jButtonIniciar;
+    private javax.swing.JButton jButtonSalir;
     private javax.swing.JTextField jTextField1;
     private java.awt.Panel panel1;
     // End of variables declaration//GEN-END:variables
