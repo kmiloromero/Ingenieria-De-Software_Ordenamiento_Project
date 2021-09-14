@@ -46,9 +46,7 @@ public class TxtClass {
             while ((cadena = lectorArchivo.readLine()) != null) {
                 lista.add(cadena);
             }
-            //String sLista = lista.toString();
-            //System.out.println(lista.toString());
-            
+
             if (ide == 0) {
                 ordenamiento.InsercionAscendente(lista);
                 System.out.println("Ordenando de Manera Ascendente");

@@ -30,6 +30,7 @@ TxtClass a = new TxtClass();
      */
     public void InsercionAscendente(ArrayList lista) {
         Nodo nuevonodo = new Nodo();
+        System.out.println("hola");
         //guardamos la informacion entrante
         for(int i = 0; i < lista.size(); i++){
             nuevonodo.dato = (int) lista.get(i);
